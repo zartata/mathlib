@@ -1,5 +1,5 @@
 <?php
-/*Calculates the subtraction of matrices of same size.*/
+/*Calculates the addition of matrices of same size.*/
 
 require "../lib/error_handler.php";
 
