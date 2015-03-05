@@ -1,6 +1,10 @@
 <?php
 //Return the mean of an array of numbers
-function mean($array) {
+
+require "../lib/error_handler.php";
+
+function mean($array)
+{
     $mean = array_sum($array) / count($array);
     return $mean;
 }

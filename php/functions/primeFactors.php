@@ -11,24 +11,28 @@ $fstr .= "$b" . ($e>1?"<sup>$e</sup>":"");
 }
 echo $fstr;
 */
-function primeFactors($n) {
+
+require "../lib/error_handler.php";
+
+function primeFactors($n)
+{
     $e = 0;
     $factors = [];
-    while ($n%2 == 0) {
+    while ($n % 2 == 0) {
         $factors[2] = 2;
-        $n = $n/2;
+        $n = $n / 2;
         $e++;
     }
-    if($e > 0) {
+    if ($e > 0) {
         $factors[2] = $e;
         $e = 0;
     }
-    for ($i = 3; $i <= sqrt($n); $i = $i+2, $e = 0) {
-        while ($n%$i == 0) {
+    for ($i = 3; $i <= sqrt($n); $i = $i + 2, $e = 0) {
+        while ($n % $i == 0) {
             $e++;
-            $n = $n/$i;
+            $n = $n / $i;
         }
-        if($e > 0) {
+        if ($e > 0) {
             $factors[$i] = $e;
         }
     }

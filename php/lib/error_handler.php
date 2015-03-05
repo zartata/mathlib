@@ -5,4 +5,3 @@ function errorHandler($errno, $errstr)
     echo "<b>Notice:</b> [".$errno."] ".$errstr." in ".$err['file']." on line ". $err['line'] ."<br>";
 }
 set_error_handler('errorHandler', E_USER_NOTICE);
-?>

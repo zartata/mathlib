@@ -1,10 +1,12 @@
 <?php
+require "../lib/error_handler.php";
 require "primeFactors.php";
 
-function politeness($n) {
+function politeness($n)
+{
     $factors = primeFactors($n);
-    foreach($factors as $b=>&$e) {
-        if($b > 2){
+    foreach ($factors as $b => &$e) {
+        if ($b > 2){
             $e++;
         }
         else {
