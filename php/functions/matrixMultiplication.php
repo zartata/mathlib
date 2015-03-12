@@ -3,7 +3,7 @@
 
 require "../lib/error_handler.php";
 
-function matrix_multiplication($m1, $m2)
+function matrix_multiplication(array $m1, array $m2)
 {
     $r = count($m1);
     $c = count($m2[0]);
