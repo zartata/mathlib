@@ -14,13 +14,11 @@ function matrix_addition()
                         foreach ($array as $k => $arr) {
                             $return[$j][$k] = isset($return[$j][$k]) ? $return[$j][$k] + $args[$i+1][$j][$k] : $arr + $args[$i+1][$j][$k];
                         }
-
                     } else {
                         trigger_error("Matrices must be same size", E_USER_NOTICE);
                         exit();
                     }
                 }
-
             } else {
                 trigger_error("Matrices must be same size", E_USER_NOTICE);
                 exit();

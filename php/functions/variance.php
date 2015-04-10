@@ -4,17 +4,15 @@
 require "../lib/error_handler.php";
 require "mean.php";
 
-function variance($array)
+function variance(array $array)
 {
     $mean = mean($array);
     foreach ($array as &$arr) {
-        if (!is_string($arr) && !is_bool($arr)) {
-            $arr = pow($arr - $mean, 2);
-        } else {
+        if (!is_numeric($arr)) {
             return false;
             exit();
         }
+        $arr = pow($arr - $mean, 2);
     }
-    $variance = array_sum($array) / count($array);
-    return $variance;
+    return array_sum($array) / count($array);
 }

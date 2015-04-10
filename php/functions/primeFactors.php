@@ -16,6 +16,14 @@ require "../lib/error_handler.php";
 
 function primeFactors($n)
 {
+    if (!is_numeric($n)) {
+        trigger_error("Argument must be numeric", E_USER_NOTICE);
+        exit();
+    }
+    if($n === 1) {
+        $factors[1] = 1;
+        return $factors;
+    }
     $e = 0;
     $factors = [];
     while ($n % 2 == 0) {
