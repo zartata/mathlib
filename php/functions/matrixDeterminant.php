@@ -10,7 +10,7 @@ function matrix_determinant(array $x)
         return $x[0];
     } elseif ($n === 2) {
         return ($x[0][0] * $x[1][1]) - ($x[0][1] * $x[1][0]);
-    } elseif ($n ===3) {
+    } elseif ($n === 3) {
         $p1 = 1;
         $p2 = 1;
         for ($i = 0; $i < $n; $i++) {
@@ -29,7 +29,7 @@ function matrix_determinant(array $x)
                 continue;
             $y = reduce($x, $h, 0, $n);
             $h % 2 == 0 ? $ret -= matrix_determinant($y) * $x[$h][0] : null;
-            $h  %2 == 1 ? $ret += matrix_determinant($y) * $x[$h][0] : null;
+            $h % 2 == 1 ? $ret += matrix_determinant($y) * $x[$h][0] : null;
         }
         return -$ret;
     }
