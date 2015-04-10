@@ -13,7 +13,6 @@ function matrix_multiplication(array $m1, array $m2)
             trigger_error("Incompatible matrices", E_USER_NOTICE);
             exit();
         }
-
         if (isset($m1[$i+1])) {
             if(count($m1[$i]) != count($m1[$i+1])) {
                 trigger_error("Incompatible matrices", E_USER_NOTICE);
